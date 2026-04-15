@@ -59,7 +59,9 @@ class Solution:
             if r - l - 1 > ans_right - ans_left:
                 ans_left, ans_right = l + 1, r  # 左闭右开区间
         # 利用切片语法返回最终的最长回文子串
+        # 截取字符串（切片）使用的是左闭右开区间 [开始:结束)。 例如 s[0:3] 截取的是索引 0, 1, 2 的字符，不包含 3。
         return s[ans_left: ans_right]
+
 ```
 ```python
 为何奇偶数循环一个到n一个到n-1？
