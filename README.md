@@ -45,7 +45,7 @@ class Solution:
             while l >= 0 and r < n and s[l] == s[r]:
                 l -= 1
                 r += 1
-            # 循环结束后，s[l+1] 到 s[r-1] 是回文串，计算其长度为 r - l - 1
+            # 循环结束后，s[l+1] 到 s[r-1] 是回文串，计算其长度为 r - l - 1【(r-1) - (l+1) + 1计算得出】
             if r - l - 1 > ans_right - ans_left:
                 ans_left, ans_right = l + 1, r  # 更新最长回文串的起止位置（左闭右开）
         # 第二部分：寻找偶数长度的回文串（以两个相邻字符的间隙为中心）
